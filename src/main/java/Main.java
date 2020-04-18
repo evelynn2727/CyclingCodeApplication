@@ -44,7 +44,7 @@ public class Main {
         Matrix matrix = new Matrix();
         matrix.createHMatrix(chosenPolynOption);
         System.out.println("Bład występuje na pozycji: " + changeBit);
-        System.out.println("\nPoprawna wiadomość: " + message+""+ decodeMessage);
+        System.out.println("\nPoprawna wiadomość: " + message+""+ remainder);
 
         System.out.println("Naciśnij enter aby kontynuować...");
         try{System.in.read();}
