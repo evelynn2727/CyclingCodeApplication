@@ -31,12 +31,18 @@ public class Main {
 
         System.out.println("Dekodowanie: ");
         long changeMessageLong = Integer.parseInt(changeMessage);
-        String decodeMessage = binaryClass.dividePolyn(changeMessageLong, firstPolyn);
+        String decodeMessage ="";
+        if(chosenPolynOption.equals("1")){
+            decodeMessage = binaryClass.dividePolyn(changeMessageLong, firstPolyn);
+        }else if (chosenPolynOption.equals("2")){
+            decodeMessage = binaryClass.dividePolyn(changeMessageLong, secondPolyn);
+        }
+
 
         Matrix matrix = new Matrix();
         matrix.createHMatrix(chosenPolynOption);
         System.out.println("Bład występuje na pozycji: " + changeBit);
-        System.out.println("\nPoprawna wiadomość: " + decodeMessage);
+        System.out.println("\nPoprawna wiadomość: " + message+""+ decodeMessage);
 
         System.out.println("Naciśnij enter aby kontynuować...");
         try{System.in.read();}

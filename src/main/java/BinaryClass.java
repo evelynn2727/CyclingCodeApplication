@@ -1,5 +1,3 @@
-import javax.swing.*;
-import java.util.Scanner;
 
 public class BinaryClass {
 
@@ -9,10 +7,10 @@ public class BinaryClass {
         String tempChosenPolym = chosenPolym + "";
 
         int dividend = Integer.parseInt(tempMess,2);
-        System.out.println("Dzielona liczba x_k*x_r: "+newMessage);
+        System.out.println("Dzielona liczba x_k*x_r: " + newMessage);
 
         int divisor = Integer.parseInt(tempChosenPolym,2);
-        System.out.println("Przez wielomian: "+chosenPolym);
+        System.out.println("Przez wielomian: " + chosenPolym);
 
         if(divisor!=0)
         {
