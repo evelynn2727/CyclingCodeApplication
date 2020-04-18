@@ -12,16 +12,27 @@ public class BinaryClass {
         int divisor = Integer.parseInt(tempChosenPolym,2);
         System.out.println("Przez wielomian: " + chosenPolym);
 
+        String remainder="";
         if(divisor!=0)
         {
-            String quotient = Integer.toBinaryString((dividend/divisor));
-            String remainder = Integer.toBinaryString((dividend%divisor));
+//            String quotient = Integer.toBinaryString((dividend/divisor));
+            remainder = Integer.toBinaryString((dividend%divisor));
+            int lengthReminder = remainder.length();
+            if(lengthReminder==2){
+                remainder=remainder+"0";
+            } else if (lengthReminder==4){
+              int  tempDividend =Integer.parseInt(remainder);
+                String tempRemainder = Integer.toBinaryString((tempDividend%divisor));
+                remainder=tempRemainder;
+            }else if (lengthReminder==1){
+                remainder+="00";
+            }
             System.out.println("Reszta z dzielenia wynosi -> R(x) = "+remainder);
             return remainder;
         }
         else
             System.out.println("Nie można dzielic przez 0!");
-        return "";
+        return remainder;
     }
 
     public long createDataForBinaryMultiply(String messageString, long chosenPolyn)

@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
+    public static String decodeMessage;
+    public static String remainder;
 
- public static Scanner scan = new Scanner(System.in);
+    public static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args){
         long firstPolyn = 1011;
@@ -17,7 +19,7 @@ public class Main {
 
         long newMessage = binaryClass.createDataForBinaryMultiply(message,mainPolyn);
 
-        String remainder = "";
+//        String remainder = "";
         if(chosenPolynOption.equals("1")){
             remainder = binaryClass.dividePolyn(newMessage,firstPolyn);
         }else if (chosenPolynOption.equals("2")){
@@ -31,7 +33,7 @@ public class Main {
 
         System.out.println("Dekodowanie: ");
         long changeMessageLong = Integer.parseInt(changeMessage);
-        String decodeMessage ="";
+//        String decodeMessage ="";
         if(chosenPolynOption.equals("1")){
             decodeMessage = binaryClass.dividePolyn(changeMessageLong, firstPolyn);
         }else if (chosenPolynOption.equals("2")){
