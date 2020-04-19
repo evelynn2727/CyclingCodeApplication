@@ -27,7 +27,7 @@ public class BinaryClass {
             }else if (lengthReminder==1){
                 remainder+="00";
             }
-            System.out.println("Reszta z dzielenia wynosi -> R(x) = "+remainder);
+//            System.out.println("Reszta z dzielenia wynosi -> R(x) = "+remainder);
             return remainder;
         }
         else
